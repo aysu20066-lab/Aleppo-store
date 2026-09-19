@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleppo Store MENA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0f19;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111827;
+      padding: 25px 15px;
+      text-align: center;
+      border-bottom: 1px solid #263044;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #aeb8ca;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 900px;
+      margin: 25px auto;
+    }
+
+    .notice {
+      background: #171e2d;
+      border: 1px solid #29354b;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #dce3ef;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #121927;
+      border: 1px solid #273249;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .diamonds {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 19px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .order {
+      background: #121927;
+      border: 1px solid #273249;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .order h2 {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 7px;
+      color: #dce3ef;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #344158;
+      background: #0d1320;
+      color: white;
+      outline: none;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 25px;
+      color: #aeb8ca;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #707b90;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎮 Aleppo Store MENA</h1>
+  <p>شحن ألعاب سريع وآمن</p>
+</header>
+
+<div class="container">
+
+  <div class="notice">
+    ⚠️ قد تتغير الأسعار حسب سعر المورد
+  </div>
+
+  <h2 style="margin-bottom:15px;">💎 Free Fire</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <div class="diamonds">110 💎</div>
+      <div class="price">140 ل.س</div>
+      <button onclick="selectPackage('110 💎 - 140 ل.س')">
+        اطلب الآن
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="diamonds">210 + 21 💎</div>
+      <div class="price">280 ل.س</div>
+      <button onclick="selectPackage('210 + 21 💎 - 280 ل.س')">
+        اطلب الآن
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="diamonds">530 + 53 💎</div>
+      <div class="price">680 ل.س</div>
+      <button onclick="selectPackage('530 + 53 💎 - 680 ل.س')">
+        اطلب الآن
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="diamonds">1080 + 108 💎</div>
+      <div class="price">1,360 ل.س</div>
+      <button onclick="selectPackage('1080 + 108 💎 - 1,360 ل.س')">
+        اطلب الآن
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="diamonds">2200 + 220 💎</div>
+      <div class="price">2,720 ل.س</div>
+      <button onclick="selectPackage('2200 + 220 💎 - 2,720 ل.س')">
+        اطلب الآن
+      </button>
+    </div>
+
+  </div>
+
+  <div class="order" id="order">
+    <h2>🛒 طلب شحن</h2>
+
+    <label>الباقة</label>
+    <select id="package">
+      <option value="">اختر الباقة</option>
+      <option>110 💎 - 140 ل.س</option>
+      <option>210 + 21 💎 - 280 ل.س</option>
+      <option>530 + 53 💎 - 680 ل.س</option>
+      <option>1080 + 108 💎 - 1,360 ل.س</option>
+      <option>2200 + 220 💎 - 2,720 ل.س</option>
+    </select>
+
+    <label>Player ID</label>
+    <input id="uid" type="text" placeholder="أدخل ID فري فاير">
+
+    <label>رقم التواصل</label>
+    <input id="phone" type="text" placeholder="رقم الهاتف أو واتساب">
+
+    <label>طريقة الدفع</label>
+    <select id="payment">
+      <option>شام كاش</option>
+    </select>
+
+    <label>رقم العملية</label>
+    <input id="transaction" type="text" placeholder="رقم عملية شام كاش">
+
+    <br><br>
+
+    <button onclick="sendOrder()">
+      إرسال الطلب
+    </button>
+  </div>
+
+  <div class="contact">
+    📞 للتواصل: <strong>0995751695</strong><br>
+    يتم تنفيذ الطلبات يدويًا بعد التحقق من الدفع.
+  </div>
+
+</div>
+
+<footer>
+  Aleppo Store MENA © 2026
+</footer>
+
+<script>
+  function selectPackage(packageName) {
+    document.getElementById("package").value = packageName;
+    document.getElementById("order").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+  function
